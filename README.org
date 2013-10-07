@@ -1,4 +1,306 @@
-rmss_style
-==========
+#+TITLE: rmss\_symbol.sty
+#+LATEX_CLASS: jsarticle
+#+OPTIONS: toc:nil LaTeX:dvipng
+#+LaTeX_HEADER: \usepackage{rmss_symbol,txfonts}
 
-長江研究室 TeX スタイルファイル
+* 必須パッケージ
+  \tt amsmath,amssymb,bm
+
+* 演算子
+** 最小，最大，引数 |
+   #+ATTR_LaTeX: align=|ll|ll|ll|
+| ~\MIN~ | $\MIN$ | ~\MAX~  | $\MAX$ | ~\ARG~ | $\ARG$ |
+** 定義
+#+ATTR_LaTeX: align=|ll|ll|
+| ~\DEF~ | $\DEF$ | ~\FED~ | $\FED$ | 
+** 除算の行内表現
+#+ATTR_LaTeX: align=|ll|
+| ~\lfrac{a}{b}~ | $\lfrac{a}{b}$ | 
+** 偏微分
+#+ATTR_LaTeX: align=|ll|
+| ~\PDF{f}{x_{1}}~                 | $\PDF{f}{x_{1}}$                 |
+| ~\PDDF{f}{x_{1}}{x_{2}}~         | $\PDDF{f}{x_{1}}{x_{2}}$         |
+| ~\PDDDF{f}{x_{1}}{x_{2}}{x_{3}}~ | $\PDDDF{f}{x_{1}}{x_{2}}{x_{3}}$ |
+| ~\PDNF{f}{x_{1}}{n}~             | $\PDNF{f}{x_{1}}{n}$             |
+| ~\ODF{f}{x}~                     | $\ODF{f}{x}$                     |
+| ~\ODNF{f}{x}{n}~                 | $\ODNF{f}{x}{n}$                 |
+* その他の記号
+** 微小変化
+#+ATTR_LaTeX: align=|ll|
+| ~\Id{\omega}~ | $\Id{\omega}$ |
+** 定数
+#+ATTR_LaTeX: align=|ll|
+| ~\Const~ | $\Const$      |
+** subject to
+#+ATTR_LaTeX: align=|ll|
+| ~\Subto{f(x)=0}~        | $\Subto{f(x)=0}$  |
+** 行列の転置 
+#+ATTR_LaTeX: align=|ll|
+| ~\Trns{\VtA}~ | $\Trns{\VtA}$ |
+
+* ベクトル
+** 文字列など
+#+ATTR_LaTeX: align=|ll|
+| ~\Vt{anything}~ | $\Vt{anything}$ |
+
+** 数字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|ll|
+| ~\Vt0~ | $\Vt0$ | ~\Vt1~ | $\Vt1$ | ~\Vt2~ | $\Vt2$ | ~\Vt3~ | $\Vt3$ | ~\Vt4~ | $\Vt4$ |
+| ~\Vt5~ | $\Vt5$ | ~\Vt6~ | $\Vt6$ | ~\Vt7~ | $\Vt7$ | ~\Vt8~ | $\Vt8$ | ~\Vt9~ | $\Vt9$ |
+
+** ラテン小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Vta~ | $\Vta$ | ~\Vtb~ | $\Vtb$ | ~\Vtc~ | $\Vtc$ | ~\Vtd~ | $\Vtd$ |
+| ~\Vte~ | $\Vte$ | ~\Vtf~ | $\Vtf$ | ~\Vtg~ | $\Vtg$ | ~\Vth~ | $\Vth$ |
+| ~\Vti~ | $\Vti$ | ~\Vtj~ | $\Vtj$ | ~\Vtk~ | $\Vtk$ | ~\Vtl~ | $\Vtl$ |
+| ~\Vtm~ | $\Vtm$ | ~\Vtn~ | $\Vtn$ | ~\Vto~ | $\Vto$ | ~\Vtp~ | $\Vtp$ |
+| ~\Vtq~ | $\Vtq$ | ~\Vtr~ | $\Vtr$ | ~\Vts~ | $\Vts$ | ~\Vtt~ | $\Vtt$ |
+| ~\Vtu~ | $\Vtu$ | ~\Vtv~ | $\Vtv$ | ~\Vtw~ | $\Vtw$ | ~\Vtx~ | $\Vtx$ |
+| ~\Vty~ | $\Vty$ | ~\Vtz~ | $\Vtz$ |        |        |        |        |
+
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\VtA~ | $\VtA$ | ~\VtB~ | $\VtB$ | ~\VtC~ | $\VtC$ | ~\VtD~ | $\VtD$ |
+| ~\VtE~ | $\VtE$ | ~\VtF~ | $\VtF$ | ~\VtG~ | $\VtG$ | ~\VtH~ | $\VtH$ |
+| ~\VtI~ | $\VtI$ | ~\VtJ~ | $\VtJ$ | ~\VtK~ | $\VtK$ | ~\VtL~ | $\VtL$ |
+| ~\VtM~ | $\VtM$ | ~\VtN~ | $\VtN$ | ~\VtO~ | $\VtO$ | ~\VtP~ | $\VtP$ |
+| ~\VtQ~ | $\VtQ$ | ~\VtR~ | $\VtR$ | ~\VtS~ | $\VtS$ | ~\VtT~ | $\VtT$ |
+| ~\VtU~ | $\VtU$ | ~\VtV~ | $\VtV$ | ~\VtW~ | $\VtW$ | ~\VtX~ | $\VtX$ |
+| ~\VtY~ | $\VtY$ | ~\VtZ~ | $\VtZ$ |        |        |        |        |
+** ギリシャ小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Vtalpha~    | $\Vtalpha$    | ~\Vtbeta~       | $\Vtbeta$       | ~\Vtgamma~    | $\Vtgamma$    | ~\Vtdelta~ | $\Vtdelta$ |
+| ~\Vtepsilon~  | $\Vtepsilon$  | ~\Vtvarepsilon~ | $\Vtvarepsilon$ | ~\Vtzeta~     | $\Vtzeta$     | ~\Vteta~   | $\Vteta$   |
+| ~\Vttheta~    | $\Vttheta$    | ~\Vtvartheta~   | $\Vtvartheta$   | ~\Vtiota~     | $\Vtiota$     | ~\Vtkappa~ | $\Vtkappa$ |
+| ~\Vtvarkappa~ | $\Vtvarkappa$ | ~\Vtlambda~     | $\Vtlambda$     | ~\Vtmu~       | $\Vtmu$       | ~\Vtnu~    | $\Vtnu$    |
+| ~\Vtxi~       | $\Vtxi$       | ~\Vtpi~         | $\Vtpi$         | ~\Vtvarpi~    | $\Vtvarpi$    | ~\Vtrho~   | $\Vtrho$   |
+| ~\Vtvarrho~   | $\Vtvarrho$   | ~\Vtsigma~      | $\Vtsigma$      | ~\Vtvarsigma~ | $\Vtvarsigma$ | ~\Vttau~   | $\Vttau$   |
+| ~\Vtupsilon~  | $\Vtupsilon$  | ~\Vtphi~        | $\Vtphi$        | ~\Vtvarphi~   | $\Vtvarphi$   | ~\Vtchi~   | $\Vtchi$   |
+| ~\Vtpsi~      | $\Vtpsi$      | ~\Vtomega~      | $\Vtomega$      | ~\Vtdigamma~  | $\Vtdigamma$  |            |            |
+** ギリシャ大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\VtGamma~ | $\VtGamma$ | ~\VtvarGamma~ | $\VtvarGamma$ | ~\VtDelta~   | $\VtDelta$   | ~\VtvarDelta~   | $\VtvarDelta$   |
+| ~\VtTheta~ | $\VtTheta$ | ~\VtvarTheta~ | $\VtvarTheta$ | ~\VtLambda~  | $\VtLambda$  | ~\VtvarLambda~  | $\VtvarLambda$  |
+| ~\VtXi~    | $\VtXi$    | ~\VtvarXi~    | $\VtvarXi$    | ~\VtPi~      | $\VtPi$      | ~\VtvarPi~      | $\VtvarPi$      |
+| ~\VtSigma~ | $\VtSigma$ | ~\VtvarSigma~ | $\VtvarSigma$ | ~\VtUpsilon~ | $\VtUpsilon$ | ~\VtvarUpsilon~ | $\VtvarUpsilon$ |
+| ~\VtPhi~   | $\VtPhi$   | ~\VtvarPhi~   | $\VtvarPhi$   | ~\VtPsi~     | $\VtPsi$     | ~\VtvarPsi~     | $\VtvarPsi$     |
+| ~\VtOmega~ | $\VtOmega$ | ~\VtvarOmega~ | $\VtvarOmega$ |              |              |                 |                 |
+
+* ローマン体
+** ラテン小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Rma~ | $\Rma$ | ~\Rmb~ | $\Rmb$ | ~\Rmc~ | $\Rmc$ | ~\Rmd~ | $\Rmd$ |
+| ~\Rme~ | $\Rme$ | ~\Rmf~ | $\Rmf$ | ~\Rmg~ | $\Rmg$ | ~\Rmh~ | $\Rmh$ |
+| ~\Rmi~ | $\Rmi$ | ~\Rmj~ | $\Rmj$ | ~\Rmk~ | $\Rmk$ | ~\Rml~ | $\Rml$ |
+| ~\Rmm~ | $\Rmm$ | ~\Rmn~ | $\Rmn$ | ~\Rmo~ | $\Rmo$ | ~\Rmp~ | $\Rmp$ |
+| ~\Rmq~ | $\Rmq$ | ~\Rmr~ | $\Rmr$ | ~\Rms~ | $\Rms$ | ~\Rmt~ | $\Rmt$ |
+| ~\Rmu~ | $\Rmu$ | ~\Rmv~ | $\Rmv$ | ~\Rmw~ | $\Rmw$ | ~\Rmx~ | $\Rmx$ |
+| ~\Rmy~ | $\Rmy$ | ~\Rmz~ | $\Rmz$ |        |        |        |        |
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\RmA~ | $\RmA$ | ~\RmB~ | $\RmB$ | ~\RmC~ | $\RmC$ | ~\RmD~ | $\RmD$ |
+| ~\RmE~ | $\RmE$ | ~\RmF~ | $\RmF$ | ~\RmG~ | $\RmG$ | ~\RmH~ | $\RmH$ |
+| ~\RmI~ | $\RmI$ | ~\RmJ~ | $\RmJ$ | ~\RmK~ | $\RmK$ | ~\RmL~ | $\RmL$ |
+| ~\RmM~ | $\RmM$ | ~\RmN~ | $\RmN$ | ~\RmO~ | $\RmO$ | ~\RmP~ | $\RmP$ |
+| ~\RmQ~ | $\RmQ$ | ~\RmR~ | $\RmR$ | ~\RmS~ | $\RmS$ | ~\RmT~ | $\RmT$ |
+| ~\RmU~ | $\RmU$ | ~\RmV~ | $\RmV$ | ~\RmW~ | $\RmW$ | ~\RmX~ | $\RmX$ |
+| ~\RmY~ | $\RmY$ | ~\RmZ~ | $\RmZ$ |        |        |        |        |
+
+* カリグラフィ体
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\ClA~ | $\ClA$ | ~\ClB~ | $\ClB$ | ~\ClC~ | $\ClC$ | ~\ClD~ | $\ClD$ |
+| ~\ClE~ | $\ClE$ | ~\ClF~ | $\ClF$ | ~\ClG~ | $\ClG$ | ~\ClH~ | $\ClH$ |
+| ~\ClI~ | $\ClI$ | ~\ClJ~ | $\ClJ$ | ~\ClK~ | $\ClK$ | ~\ClL~ | $\ClL$ |
+| ~\ClM~ | $\ClM$ | ~\ClN~ | $\ClN$ | ~\ClO~ | $\ClO$ | ~\ClP~ | $\ClP$ |
+| ~\ClQ~ | $\ClQ$ | ~\ClR~ | $\ClR$ | ~\ClS~ | $\ClS$ | ~\ClT~ | $\ClT$ |
+| ~\ClU~ | $\ClU$ | ~\ClV~ | $\ClV$ | ~\ClW~ | $\ClW$ | ~\ClX~ | $\ClX$ |
+| ~\ClY~ | $\ClY$ | ~\ClZ~ | $\ClZ$ |        |        |        |        |
+
+* 白抜き文字
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\BbA~ | $\BbA$ | ~\BbB~ | $\BbB$ | ~\BbC~ | $\BbC$ | ~\BbD~ | $\BbD$ |
+| ~\BbE~ | $\BbE$ | ~\BbF~ | $\BbF$ | ~\BbG~ | $\BbG$ | ~\BbH~ | $\BbH$ |
+| ~\BbI~ | $\BbI$ | ~\BbJ~ | $\BbJ$ | ~\BbK~ | $\BbK$ | ~\BbL~ | $\BbL$ |
+| ~\BbM~ | $\BbM$ | ~\BbN~ | $\BbN$ | ~\BbO~ | $\BbO$ | ~\BbP~ | $\BbP$ |
+| ~\BbQ~ | $\BbQ$ | ~\BbR~ | $\BbR$ | ~\BbS~ | $\BbS$ | ~\BbT~ | $\BbT$ |
+| ~\BbU~ | $\BbU$ | ~\BbV~ | $\BbV$ | ~\BbW~ | $\BbW$ | ~\BbX~ | $\BbX$ |
+| ~\BbY~ | $\BbY$ | ~\BbZ~ | $\BbZ$ |        |        |        |        |
+
+* ひげ文字(？)体
+** ラテン小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Fka~ | $\Fka$ | ~\Fkb~ | $\Fkb$ | ~\Fkc~ | $\Fkc$ | ~\Fkd~ | $\Fkd$ |
+| ~\Fke~ | $\Fke$ | ~\Fkf~ | $\Fkf$ | ~\Fkg~ | $\Fkg$ | ~\Fkh~ | $\Fkh$ |
+| ~\Fki~ | $\Fki$ | ~\Fkj~ | $\Fkj$ | ~\Fkk~ | $\Fkk$ | ~\Fkl~ | $\Fkl$ |
+| ~\Fkm~ | $\Fkm$ | ~\Fkn~ | $\Fkn$ | ~\Fko~ | $\Fko$ | ~\Fkp~ | $\Fkp$ |
+| ~\Fkq~ | $\Fkq$ | ~\Fkr~ | $\Fkr$ | ~\Fks~ | $\Fks$ | ~\Fkt~ | $\Fkt$ |
+| ~\Fku~ | $\Fku$ | ~\Fkv~ | $\Fkv$ | ~\Fkw~ | $\Fkw$ | ~\Fkx~ | $\Fkx$ |
+| ~\Fky~ | $\Fky$ | ~\Fkz~ | $\Fkz$ |        |        |        |        |
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\FkA~ | $\FkA$ | ~\FkB~ | $\FkB$ | ~\FkC~ | $\FkC$ | ~\FkD~ | $\FkD$ |
+| ~\FkE~ | $\FkE$ | ~\FkF~ | $\FkF$ | ~\FkG~ | $\FkG$ | ~\FkH~ | $\FkH$ |
+| ~\FkI~ | $\FkI$ | ~\FkJ~ | $\FkJ$ | ~\FkK~ | $\FkK$ | ~\FkL~ | $\FkL$ |
+| ~\FkM~ | $\FkM$ | ~\FkN~ | $\FkN$ | ~\FkO~ | $\FkO$ | ~\FkP~ | $\FkP$ |
+| ~\FkQ~ | $\FkQ$ | ~\FkR~ | $\FkR$ | ~\FkS~ | $\FkS$ | ~\FkT~ | $\FkT$ |
+| ~\FkU~ | $\FkU$ | ~\FkV~ | $\FkV$ | ~\FkW~ | $\FkW$ | ~\FkX~ | $\FkX$ |
+| ~\FkY~ | $\FkY$ | ~\FkZ~ | $\FkZ$ |        |        |        |        |
+
+* ハット付き文字
+** ラテン小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Hta~ | $\Hta$ | ~\Htb~ | $\Htb$ | ~\Htc~ | $\Htc$ | ~\Htd~ | $\Htd$ |
+| ~\Hte~ | $\Hte$ | ~\Htf~ | $\Htf$ | ~\Htg~ | $\Htg$ | ~\Hth~ | $\Hth$ |
+| ~\Hti~ | $\Hti$ | ~\Htj~ | $\Htj$ | ~\Htk~ | $\Htk$ | ~\Htl~ | $\Htl$ |
+| ~\Htm~ | $\Htm$ | ~\Htn~ | $\Htn$ | ~\Hto~ | $\Hto$ | ~\Htp~ | $\Htp$ |
+| ~\Htq~ | $\Htq$ | ~\Htr~ | $\Htr$ | ~\Hts~ | $\Hts$ | ~\Htt~ | $\Htt$ |
+| ~\Htu~ | $\Htu$ | ~\Htv~ | $\Htv$ | ~\Htw~ | $\Htw$ | ~\Htx~ | $\Htx$ |
+| ~\Hty~ | $\Hty$ | ~\Htz~ | $\Htz$ |        |        |        |        |
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\HtA~ | $\HtA$ | ~\HtB~ | $\HtB$ | ~\HtC~ | $\HtC$ | ~\HtD~ | $\HtD$ |
+| ~\HtE~ | $\HtE$ | ~\HtF~ | $\HtF$ | ~\HtG~ | $\HtG$ | ~\HtH~ | $\HtH$ |
+| ~\HtI~ | $\HtI$ | ~\HtJ~ | $\HtJ$ | ~\HtK~ | $\HtK$ | ~\HtL~ | $\HtL$ |
+| ~\HtM~ | $\HtM$ | ~\HtN~ | $\HtN$ | ~\HtO~ | $\HtO$ | ~\HtP~ | $\HtP$ |
+| ~\HtQ~ | $\HtQ$ | ~\HtR~ | $\HtR$ | ~\HtS~ | $\HtS$ | ~\HtT~ | $\HtT$ |
+| ~\HtU~ | $\HtU$ | ~\HtV~ | $\HtV$ | ~\HtW~ | $\HtW$ | ~\HtX~ | $\HtX$ |
+| ~\HtY~ | $\HtY$ | ~\HtZ~ | $\HtZ$ |        |        |        |        |
+** ギリシャ小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Htalpha~    | $\Htalpha$    | ~\Htbeta~       | $\Htbeta$       | ~\Htgamma~    | $\Htgamma$    | ~\Htdelta~ | $\Htdelta$ |
+| ~\Htepsilon~  | $\Htepsilon$  | ~\Htvarepsilon~ | $\Htvarepsilon$ | ~\Htzeta~     | $\Htzeta$     | ~\Hteta~   | $\Hteta$   |
+| ~\Httheta~    | $\Httheta$    | ~\Htvartheta~   | $\Htvartheta$   | ~\Htiota~     | $\Htiota$     | ~\Htkappa~ | $\Htkappa$ |
+| ~\Htvarkappa~ | $\Htvarkappa$ | ~\Htlambda~     | $\Htlambda$     | ~\Htmu~       | $\Htmu$       | ~\Htnu~    | $\Htnu$    |
+| ~\Htxi~       | $\Htxi$       | ~\Htpi~         | $\Htpi$         | ~\Htvarpi~    | $\Htvarpi$    | ~\Htrho~   | $\Htrho$   |
+| ~\Htvarrho~   | $\Htvarrho$   | ~\Htsigma~      | $\Htsigma$      | ~\Htvarsigma~ | $\Htvarsigma$ | ~\Httau~   | $\Httau$   |
+| ~\Htupsilon~  | $\Htupsilon$  | ~\Htphi~        | $\Htphi$        | ~\Htvarphi~   | $\Htvarphi$   | ~\Htchi~   | $\Htchi$   |
+| ~\Htpsi~      | $\Htpsi$      | ~\Htomega~      | $\Htomega$      | ~\Htdigamma~  | $\Htdigamma$  |            |            |
+** ギリシャ大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\HtGamma~ | $\HtGamma$ | ~\HtvarGamma~ | $\HtvarGamma$ | ~\HtDelta~   | $\HtDelta$   | ~\HtvarDelta~   | $\HtvarDelta$   |
+| ~\HtTheta~ | $\HtTheta$ | ~\HtvarTheta~ | $\HtvarTheta$ | ~\HtLambda~  | $\HtLambda$  | ~\HtvarLambda~  | $\HtvarLambda$  |
+| ~\HtXi~    | $\HtXi$    | ~\HtvarXi~    | $\HtvarXi$    | ~\HtPi~      | $\HtPi$      | ~\HtvarPi~      | $\HtvarPi$      |
+| ~\HtSigma~ | $\HtSigma$ | ~\HtvarSigma~ | $\HtvarSigma$ | ~\HtUpsilon~ | $\HtUpsilon$ | ~\HtvarUpsilon~ | $\HtvarUpsilon$ |
+| ~\HtPhi~   | $\HtPhi$   | ~\HtvarPhi~   | $\HtvarPhi$   | ~\HtPsi~     | $\HtPsi$     | ~\HtvarPsi~     | $\HtvarPsi$     |
+| ~\HtOmega~ | $\HtOmega$ | ~\HtvarOmega~ | $\HtvarOmega$ |              |              |                 |                 |
+
+
+* バー付き文字
+** ラテン小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Bra~ | $\Bra$ | ~\Brb~ | $\Brb$ | ~\Brc~ | $\Brc$ | ~\Brd~ | $\Brd$ |
+| ~\Bre~ | $\Bre$ | ~\Brf~ | $\Brf$ | ~\Brg~ | $\Brg$ | ~\Brh~ | $\Brh$ |
+| ~\Bri~ | $\Bri$ | ~\Brj~ | $\Brj$ | ~\Brk~ | $\Brk$ | ~\Brl~ | $\Brl$ |
+| ~\Brm~ | $\Brm$ | ~\Brn~ | $\Brn$ | ~\Bro~ | $\Bro$ | ~\Brp~ | $\Brp$ |
+| ~\Brq~ | $\Brq$ | ~\Brr~ | $\Brr$ | ~\Brs~ | $\Brs$ | ~\Brt~ | $\Brt$ |
+| ~\Bru~ | $\Bru$ | ~\Brv~ | $\Brv$ | ~\Brw~ | $\Brw$ | ~\Brx~ | $\Brx$ |
+| ~\Bry~ | $\Bry$ | ~\Brz~ | $\Brz$ |        |        |        |        |
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\BrA~ | $\BrA$ | ~\BrB~ | $\BrB$ | ~\BrC~ | $\BrC$ | ~\BrD~ | $\BrD$ |
+| ~\BrE~ | $\BrE$ | ~\BrF~ | $\BrF$ | ~\BrG~ | $\BrG$ | ~\BrH~ | $\BrH$ |
+| ~\BrI~ | $\BrI$ | ~\BrJ~ | $\BrJ$ | ~\BrK~ | $\BrK$ | ~\BrL~ | $\BrL$ |
+| ~\BrM~ | $\BrM$ | ~\BrN~ | $\BrN$ | ~\BrO~ | $\BrO$ | ~\BrP~ | $\BrP$ |
+| ~\BrQ~ | $\BrQ$ | ~\BrR~ | $\BrR$ | ~\BrS~ | $\BrS$ | ~\BrT~ | $\BrT$ |
+| ~\BrU~ | $\BrU$ | ~\BrV~ | $\BrV$ | ~\BrW~ | $\BrW$ | ~\BrX~ | $\BrX$ |
+| ~\BrY~ | $\BrY$ | ~\BrZ~ | $\BrZ$ |        |        |        |        |
+** ギリシャ小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Bralpha~    | $\Bralpha$    | ~\Brbeta~       | $\Brbeta$       | ~\Brgamma~    | $\Brgamma$    | ~\Brdelta~ | $\Brdelta$ |
+| ~\Brepsilon~  | $\Brepsilon$  | ~\Brvarepsilon~ | $\Brvarepsilon$ | ~\Brzeta~     | $\Brzeta$     | ~\Breta~   | $\Breta$   |
+| ~\Brtheta~    | $\Brtheta$    | ~\Brvartheta~   | $\Brvartheta$   | ~\Briota~     | $\Briota$     | ~\Brkappa~ | $\Brkappa$ |
+| ~\Brvarkappa~ | $\Brvarkappa$ | ~\Brlambda~     | $\Brlambda$     | ~\Brmu~       | $\Brmu$       | ~\Brnu~    | $\Brnu$    |
+| ~\Brxi~       | $\Brxi$       | ~\Brpi~         | $\Brpi$         | ~\Brvarpi~    | $\Brvarpi$    | ~\Brrho~   | $\Brrho$   |
+| ~\Brvarrho~   | $\Brvarrho$   | ~\Brsigma~      | $\Brsigma$      | ~\Brvarsigma~ | $\Brvarsigma$ | ~\Brtau~   | $\Brtau$   |
+| ~\Brupsilon~  | $\Brupsilon$  | ~\Brphi~        | $\Brphi$        | ~\Brvarphi~   | $\Brvarphi$   | ~\Brchi~   | $\Brchi$   |
+| ~\Brpsi~      | $\Brpsi$      | ~\Bromega~      | $\Bromega$      | ~\Brdigamma~  | $\Brdigamma$  |            |            |
+** ギリシャ大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\BrGamma~ | $\BrGamma$ | ~\BrvarGamma~ | $\BrvarGamma$ | ~\BrDelta~   | $\BrDelta$   | ~\BrvarDelta~   | $\BrvarDelta$   |
+| ~\BrTheta~ | $\BrTheta$ | ~\BrvarTheta~ | $\BrvarTheta$ | ~\BrLambda~  | $\BrLambda$  | ~\BrvarLambda~  | $\BrvarLambda$  |
+| ~\BrXi~    | $\BrXi$    | ~\BrvarXi~    | $\BrvarXi$    | ~\BrPi~      | $\BrPi$      | ~\BrvarPi~      | $\BrvarPi$      |
+| ~\BrSigma~ | $\BrSigma$ | ~\BrvarSigma~ | $\BrvarSigma$ | ~\BrUpsilon~ | $\BrUpsilon$ | ~\BrvarUpsilon~ | $\BrvarUpsilon$ |
+| ~\BrPhi~   | $\BrPhi$   | ~\BrvarPhi~   | $\BrvarPhi$   | ~\BrPsi~     | $\BrPsi$     | ~\BrvarPsi~     | $\BrvarPsi$     |
+| ~\BrOmega~ | $\BrOmega$ | ~\BrvarOmega~ | $\BrvarOmega$ |              |              |                 |                 |
+
+
+
+* チルダ付き文字
+** ラテン小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Tla~ | $\Tla$ | ~\Tlb~ | $\Tlb$ | ~\Tlc~ | $\Tlc$ | ~\Tld~ | $\Tld$ |
+| ~\Tle~ | $\Tle$ | ~\Tlf~ | $\Tlf$ | ~\Tlg~ | $\Tlg$ | ~\Tlh~ | $\Tlh$ |
+| ~\Tli~ | $\Tli$ | ~\Tlj~ | $\Tlj$ | ~\Tlk~ | $\Tlk$ | ~\Tll~ | $\Tll$ |
+| ~\Tlm~ | $\Tlm$ | ~\Tln~ | $\Tln$ | ~\Tlo~ | $\Tlo$ | ~\Tlp~ | $\Tlp$ |
+| ~\Tlq~ | $\Tlq$ | ~\Tlr~ | $\Tlr$ | ~\Tls~ | $\Tls$ | ~\Tlt~ | $\Tlt$ |
+| ~\Tlu~ | $\Tlu$ | ~\Tlv~ | $\Tlv$ | ~\Tlw~ | $\Tlw$ | ~\Tlx~ | $\Tlx$ |
+| ~\Tly~ | $\Tly$ | ~\Tlz~ | $\Tlz$ |        |        |        |        |
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\TlA~ | $\TlA$ | ~\TlB~ | $\TlB$ | ~\TlC~ | $\TlC$ | ~\TlD~ | $\TlD$ |
+| ~\TlE~ | $\TlE$ | ~\TlF~ | $\TlF$ | ~\TlG~ | $\TlG$ | ~\TlH~ | $\TlH$ |
+| ~\TlI~ | $\TlI$ | ~\TlJ~ | $\TlJ$ | ~\TlK~ | $\TlK$ | ~\TlL~ | $\TlL$ |
+| ~\TlM~ | $\TlM$ | ~\TlN~ | $\TlN$ | ~\TlO~ | $\TlO$ | ~\TlP~ | $\TlP$ |
+| ~\TlQ~ | $\TlQ$ | ~\TlR~ | $\TlR$ | ~\TlS~ | $\TlS$ | ~\TlT~ | $\TlT$ |
+| ~\TlU~ | $\TlU$ | ~\TlV~ | $\TlV$ | ~\TlW~ | $\TlW$ | ~\TlX~ | $\TlX$ |
+| ~\TlY~ | $\TlY$ | ~\TlZ~ | $\TlZ$ |        |        |        |        |
+** ギリシャ小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Tlalpha~    | $\Tlalpha$    | ~\Tlbeta~       | $\Tlbeta$       | ~\Tlgamma~    | $\Tlgamma$    | ~\Tldelta~ | $\Tldelta$ |
+| ~\Tlepsilon~  | $\Tlepsilon$  | ~\Tlvarepsilon~ | $\Tlvarepsilon$ | ~\Tlzeta~     | $\Tlzeta$     | ~\Tleta~   | $\Tleta$   |
+| ~\Tltheta~    | $\Tltheta$    | ~\Tlvartheta~   | $\Tlvartheta$   | ~\Tliota~     | $\Tliota$     | ~\Tlkappa~ | $\Tlkappa$ |
+| ~\Tlvarkappa~ | $\Tlvarkappa$ | ~\Tllambda~     | $\Tllambda$     | ~\Tlmu~       | $\Tlmu$       | ~\Tlnu~    | $\Tlnu$    |
+| ~\Tlxi~       | $\Tlxi$       | ~\Tlpi~         | $\Tlpi$         | ~\Tlvarpi~    | $\Tlvarpi$    | ~\Tlrho~   | $\Tlrho$   |
+| ~\Tlvarrho~   | $\Tlvarrho$   | ~\Tlsigma~      | $\Tlsigma$      | ~\Tlvarsigma~ | $\Tlvarsigma$ | ~\Tltau~   | $\Tltau$   |
+| ~\Tlupsilon~  | $\Tlupsilon$  | ~\Tlphi~        | $\Tlphi$        | ~\Tlvarphi~   | $\Tlvarphi$   | ~\Tlchi~   | $\Tlchi$   |
+| ~\Tlpsi~      | $\Tlpsi$      | ~\Tlomega~      | $\Tlomega$      | ~\Tldigamma~  | $\Tldigamma$  |            |            |
+** ギリシャ大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\TlGamma~ | $\TlGamma$ | ~\TlvarGamma~ | $\TlvarGamma$ | ~\TlDelta~   | $\TlDelta$   | ~\TlvarDelta~   | $\TlvarDelta$   |
+| ~\TlTheta~ | $\TlTheta$ | ~\TlvarTheta~ | $\TlvarTheta$ | ~\TlLambda~  | $\TlLambda$  | ~\TlvarLambda~  | $\TlvarLambda$  |
+| ~\TlXi~    | $\TlXi$    | ~\TlvarXi~    | $\TlvarXi$    | ~\TlPi~      | $\TlPi$      | ~\TlvarPi~      | $\TlvarPi$      |
+| ~\TlSigma~ | $\TlSigma$ | ~\TlvarSigma~ | $\TlvarSigma$ | ~\TlUpsilon~ | $\TlUpsilon$ | ~\TlvarUpsilon~ | $\TlvarUpsilon$ |
+| ~\TlPhi~   | $\TlPhi$   | ~\TlvarPhi~   | $\TlvarPhi$   | ~\TlPsi~     | $\TlPsi$     | ~\TlvarPsi~     | $\TlvarPsi$     |
+| ~\TlOmega~ | $\TlOmega$ | ~\TlvarOmega~ | $\TlvarOmega$ |              |              |                 |                 |
+
+
+
+* ドット付き文字
+** ラテン小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Dta~ | $\Dta$ | ~\Dtb~ | $\Dtb$ | ~\Dtc~ | $\Dtc$ | ~\Dtd~ | $\Dtd$ |
+| ~\Dte~ | $\Dte$ | ~\Dtf~ | $\Dtf$ | ~\Dtg~ | $\Dtg$ | ~\Dth~ | $\Dth$ |
+| ~\Dti~ | $\Dti$ | ~\Dtj~ | $\Dtj$ | ~\Dtk~ | $\Dtk$ | ~\Dtl~ | $\Dtl$ |
+| ~\Dtm~ | $\Dtm$ | ~\Dtn~ | $\Dtn$ | ~\Dto~ | $\Dto$ | ~\Dtp~ | $\Dtp$ |
+| ~\Dtq~ | $\Dtq$ | ~\Dtr~ | $\Dtr$ | ~\Dts~ | $\Dts$ | ~\Dtt~ | $\Dtt$ |
+| ~\Dtu~ | $\Dtu$ | ~\Dtv~ | $\Dtv$ | ~\Dtw~ | $\Dtw$ | ~\Dtx~ | $\Dtx$ |
+| ~\Dty~ | $\Dty$ | ~\Dtz~ | $\Dtz$ |        |        |        |        |
+** ラテン大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\DtA~ | $\DtA$ | ~\DtB~ | $\DtB$ | ~\DtC~ | $\DtC$ | ~\DtD~ | $\DtD$ |
+| ~\DtE~ | $\DtE$ | ~\DtF~ | $\DtF$ | ~\DtG~ | $\DtG$ | ~\DtH~ | $\DtH$ |
+| ~\DtI~ | $\DtI$ | ~\DtJ~ | $\DtJ$ | ~\DtK~ | $\DtK$ | ~\DtL~ | $\DtL$ |
+| ~\DtM~ | $\DtM$ | ~\DtN~ | $\DtN$ | ~\DtO~ | $\DtO$ | ~\DtP~ | $\DtP$ |
+| ~\DtQ~ | $\DtQ$ | ~\DtR~ | $\DtR$ | ~\DtS~ | $\DtS$ | ~\DtT~ | $\DtT$ |
+| ~\DtU~ | $\DtU$ | ~\DtV~ | $\DtV$ | ~\DtW~ | $\DtW$ | ~\DtX~ | $\DtX$ |
+| ~\DtY~ | $\DtY$ | ~\DtZ~ | $\DtZ$ |        |        |        |        |
+** ギリシャ小文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\Dtalpha~    | $\Dtalpha$    | ~\Dtbeta~       | $\Dtbeta$       | ~\Dtgamma~    | $\Dtgamma$    | ~\Dtdelta~ | $\Dtdelta$ |
+| ~\Dtepsilon~  | $\Dtepsilon$  | ~\Dtvarepsilon~ | $\Dtvarepsilon$ | ~\Dtzeta~     | $\Dtzeta$     | ~\Dteta~   | $\Dteta$   |
+| ~\Dttheta~    | $\Dttheta$    | ~\Dtvartheta~   | $\Dtvartheta$   | ~\Dtiota~     | $\Dtiota$     | ~\Dtkappa~ | $\Dtkappa$ |
+| ~\Dtvarkappa~ | $\Dtvarkappa$ | ~\Dtlambda~     | $\Dtlambda$     | ~\Dtmu~       | $\Dtmu$       | ~\Dtnu~    | $\Dtnu$    |
+| ~\Dtxi~       | $\Dtxi$       | ~\Dtpi~         | $\Dtpi$         | ~\Dtvarpi~    | $\Dtvarpi$    | ~\Dtrho~   | $\Dtrho$   |
+| ~\Dtvarrho~   | $\Dtvarrho$   | ~\Dtsigma~      | $\Dtsigma$      | ~\Dtvarsigma~ | $\Dtvarsigma$ | ~\Dttau~   | $\Dttau$   |
+| ~\Dtupsilon~  | $\Dtupsilon$  | ~\Dtphi~        | $\Dtphi$        | ~\Dtvarphi~   | $\Dtvarphi$   | ~\Dtchi~   | $\Dtchi$   |
+| ~\Dtpsi~      | $\Dtpsi$      | ~\Dtomega~      | $\Dtomega$      | ~\Dtdigamma~  | $\Dtdigamma$  |            |            |
+** ギリシャ大文字
+   #+ATTR_LaTeX: align=|ll|ll|ll|ll|
+| ~\DtGamma~ | $\DtGamma$ | ~\DtvarGamma~ | $\DtvarGamma$ | ~\DtDelta~   | $\DtDelta$   | ~\DtvarDelta~   | $\DtvarDelta$   |
+| ~\DtTheta~ | $\DtTheta$ | ~\DtvarTheta~ | $\DtvarTheta$ | ~\DtLambda~  | $\DtLambda$  | ~\DtvarLambda~  | $\DtvarLambda$  |
+| ~\DtXi~    | $\DtXi$    | ~\DtvarXi~    | $\DtvarXi$    | ~\DtPi~      | $\DtPi$      | ~\DtvarPi~      | $\DtvarPi$      |
+| ~\DtSigma~ | $\DtSigma$ | ~\DtvarSigma~ | $\DtvarSigma$ | ~\DtUpsilon~ | $\DtUpsilon$ | ~\DtvarUpsilon~ | $\DtvarUpsilon$ |
+| ~\DtPhi~   | $\DtPhi$   | ~\DtvarPhi~   | $\DtvarPhi$   | ~\DtPsi~     | $\DtPsi$     | ~\DtvarPsi~     | $\DtvarPsi$     |
+| ~\DtOmega~ | $\DtOmega$ | ~\DtvarOmega~ | $\DtvarOmega$ |              |              |                 |                 |
