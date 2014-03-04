@@ -4,25 +4,29 @@
 #+LaTeX_HEADER: \usepackage{rmss_symbol,txfonts}
 
 * 使い方
-- 長江研標準の =~/Dropbox/texmf= フォルダにサブモジュールとして追加する場合
+** 長江研標準の =~/Dropbox/texmf= フォルダにサブモジュールとして追加する場合
+- =~/Dropbox/texmf= に git リポジトリがあるなら，以下を実行する:
   #+BEGIN_SRC sh
     cd ~/Dropbox/texmf
     git submodule add git@github.com:nagae/rmss_style.git tex/rmss_style
   #+END_SRC
-  
-- =git= のサブモジュールとして読み込む場合
-
-  メインの tex が置いてあるフォルダに移動し，以下を入力：
+- こうすれば，いつでも以下のコマンドで最新版を取得できる：
   #+BEGIN_SRC sh
-  git submodule add git@github.com:nagae/rmss_style.git texmf/tex/rmss_style
+    cd ~/Dropbox/texmf/tex/rmss_style
+    git checkout master             # master ブランチに移動
+    git pull                        # 最新版を取得
   #+END_SRC
-
-- こうすれば，いつでも
+** =git= のサブモジュールとして読み込む場合
+- メインの tex が置いてあるフォルダに移動し，以下を入力：
   #+BEGIN_SRC sh
-    cd ~/Dropbox/texmf/tex
-    git pull
+    git submodule add git@github.com:nagae/rmss_style.git texmf/tex/rmss_style
   #+END_SRC
-  とすることで，最新の内容を取り寄せられる．
+- 最新版を取得する方法
+  #+BEGIN_SRC sh
+    cd texmf/tex/rmss_style
+    git checkout master             # master ブランチに移動
+    git pull                        # 最新版を取得
+  #+END_SRC
 * 必須パッケージ
   =amsmath,amssymb,bm=
 
